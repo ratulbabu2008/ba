@@ -1,0 +1,325 @@
+* {
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* border: 1px solid black; */
+    width: 100%;
+    /* height: 50rem;s */
+    position: relative;
+}
+
+.toperWrapper {
+    /* border: 1px solid black; */
+    background-color: yellow;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.toperWrapper h1 {
+    /* border: 1px solid black; */
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 5px;
+    bottom: -5px;
+    left: 5%;
+    text-transform: capitalize;
+    color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* float: left; */
+}
+
+.toperWrapper .ul-wrapper {
+    width: fit-content;
+    height: 100vh;
+    /* border: 1px solid black; */
+    /* overflow: hidden; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2px;
+}
+
+.toperWrapper .ul-wrapper h2 {
+    display: none;
+}
+
+.toperWrapper .ul-wrapper li {
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 40px;
+    /* background-color: gray; */
+    float: right;
+    margin-top: 3px;
+    list-style: none;
+}
+
+.toperWrapper .ul-wrapper li a {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: gray;
+    font-size: large;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.toperWrapper .thre {
+    display: block;
+    width: 50px;
+    height: 30px;
+    /* border: 1px solid black; */
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+.toperWrapper .thre .common {
+    display: block;
+    width: 25px;
+    border: 1px solid gray;
+    margin: 5px;
+}
+
+@media (max-width:978px) {
+    .toperWrapper .thre {
+        display: block;
+        position: absolute;
+        right: 4px;
+        top: 10px;
+        bottom: -5px;
+        border: none;
+    }
+    .toperWrapper .ul-wrapper {
+        display: none;
+    }
+    .toperWrapper h1 {
+        position: absolute;
+        left: 10%;
+    }
+}
+
+.testul {
+    display: none;
+}
+
+@media (max-width:390px) {
+    .toperWrapper h1 {
+        position: absolute;
+        left: 2%;
+        top: 15%;
+        font-size: 8vw;
+    }
+}
+
+.toperWrapper input:checked~.thre #first {
+    transform: rotate(-22deg);
+    width: 12px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+.toperWrapper input:checked~.thre #third {
+    transform: rotate(25deg);
+    width: 12px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}
+
+.toperWrapper input:checked~.thre #second {
+    width: 35px;
+    transition: 1s ease-in-out;
+}
+
+.toperWrapper input:checked~ul {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 4px gray;
+    margin-top: 50px;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+}
+
+.toperWrapper input:checked~.thre {
+    position: absolute;
+    right: 2px;
+    top: 20px;
+}
+
+.toperWrapper input:checked~.thre {
+    animation-name: ra;
+    animation-duration: 0.24s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes ra {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.toperWrapper input:checked~ul li a:hover {
+    text-decoration: underline;
+}
+
+.log-in {
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 0 3px gray;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 90px;
+    /* display: flex;
+    flex-direction: row; */
+    position: relative;
+    background-color: white;
+}
+
+.log-in h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: cursive;
+    color: blue;
+}
+
+.log-in * {
+    font-family: sans-serif;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.log-in #fi {
+    position: absolute;
+    top: 150px;
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    box-shadow: 0 0 7px gray;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.log-in #se {
+    /* position: absolute; */
+    top: 210px;
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    box-shadow: 0 0 6px gray;
+    border: none;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.log-in button {
+    top: 300px;
+    width: 250px;
+    height: 30px;
+    background-color: rgb(38, 252, 38);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.log-in button:hover {
+    background-color: rgb(82, 231, 82);
+    /* color: black; */
+}
+
+.log-in p {
+    display: block;
+    width: 20px;
+    top: 340px;
+}
+
+.log-in #anc {
+    display: block;
+    top: 360px;
+    width: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    color: blue;
+}
+
+.abeg {
+    width: 300px;
+    height: fit-content;
+    box-shadow: 0 0 5px gray;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 730px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    background-color: white;
+}
+
+.box {
+    /* border: 1px solid black; */
+    height: auto;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 950px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section {
+    border: none;
+    outline: none;
+    /* background-color: purple; */
+    box-shadow: 0 0 3px black;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 0 0 5px gray;
+    border-radius: 5px;
+    background-color: lime;
+}
